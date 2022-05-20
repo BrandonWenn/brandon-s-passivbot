@@ -1,0 +1,39 @@
+
+from pickletools import long1
+
+
+c1= [
+    "MASKUSDT",
+    "PEOPLEUSDT",
+    "ZILUSDT",
+    "HBARUSDT",
+    "1000SHIBUSDT",
+    "ZECUSDT",
+    "LRCUSDT",
+    "MATICUSDT",
+    "CTKUSDT",
+    "TRBUSDT",
+    "NKNUSDT",
+    "C98USDT",
+    "FLMUSDT",
+    "ZRXUSDT",
+    "CHZUSDT",
+    "LINAUSDT",
+    "HNTUSDT",
+    "GRTUSDT",
+    "BANDUSDT",
+    "SCUSDT"
+    ]
+c2 = ['SXPUSDT', '1000SHIBUSDT', 'HNTUSDT', 'MANAUSDT', 'CHZUSDT', 'BANDUSDT', 'CHRUSDT', 'NEARUSDT', 'ANKRUSDT', 'CELRUSDT', 'DOGEUSDT', 'KNCUSDT', 'CRVUSDT', 'KAVAUSDT', 'ONEUSDT', 'COTIUSDT', 'GRTUSDT', 'HBARUSDT', 'STORJUSDT', 'CVCUSDT', 'ALICEUSDT', 'CTKUSDT', 'DENTUSDT', 'RVNUSDT', 'GTCUSDT']
+
+test_list = c1 + c2
+res = []
+for i in test_list:
+    if i not in res:    
+        res.append(i)
+# print(res)
+
+res_done = ['MASKUSDT', 'PEOPLEUSDT', 'ZILUSDT', 'HBARUSDT', '1000SHIBUSDT', 'ZECUSDT', 'LRCUSDT', 'MATICUSDT', 'CTKUSDT', 'TRBUSDT', 'NKNUSDT', 'C98USDT', 'FLMUSDT', 'ZRXUSDT', 'CHZUSDT', 'LINAUSDT', 'HNTUSDT', 'GRTUSDT', 'BANDUSDT', 'SCUSDT', 'SXPUSDT', 'MANAUSDT', 'CHRUSDT', 'NEARUSDT', 'ANKRUSDT', 'CELRUSDT', 'DOGEUSDT', 'KNCUSDT', 'CRVUSDT', 'KAVAUSDT', 'ONEUSDT', 'COTIUSDT', 'STORJUSDT', 'CVCUSDT', 'ALICEUSDT', 'DENTUSDT', 'RVNUSDT', 'GTCUSDT']
+
+print(len(res_done))
+print(res_done.sort())
