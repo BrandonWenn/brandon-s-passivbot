@@ -1,6 +1,7 @@
 from distutils.command.config import config
 import subprocess
 import time
+import os
 
 # coins = [
 #     "MASKUSDT",
@@ -31,11 +32,13 @@ config = "configs/live/recursive_grid_mode_auto_unstuck_enabled.example.json"#�
 # config = "configs\live\static_grid_mode_auto_unstuck_disabled.example.json"
 acount = "binance_01"
 
+currentPath = os.getcwd().replace('\\','/')    # 获取当前路径
+
 for coin in coins:
     subprocess.Popen(
         rf'C:/py3810/python.exe passivbot.py {acount} {coin} {config}', 
         creationflags=subprocess.CREATE_NEW_CONSOLE,
-        cwd=r"C:\\Users\\Administrator\\Desktop\\passivbot",
+        cwd= currentPath,
         shell= False
     )
     print(f"{coin} started...")
