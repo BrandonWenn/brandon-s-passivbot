@@ -1,16 +1,17 @@
 # -*- coding: UTF-8 -*-
 import subprocess
+import os
 
-from sklearn.preprocessing import OneHotEncoder
 
 config_path = r"configs\live\recursive_grid_mode_auto_unstuck_enabled.example.json"
 # config_path = r"configs\live\static_grid_mode_auto_unstuck_enabled.example.json"
-coins = r"-s C98USDT"
+coins = r"-s HNTUSDT"
 user = r"--user binance_01"
-startdate_and_enddate = r"--start_date 2022-04-14 --end_date 2022-05-14"
+startdate_and_enddate = r"--start_date 2022-04-21 --end_date 2022-05-21"
 oh = ""
 
-running_cwd = r"C:\Users\Administrator\Desktop\passivbot"
+currentPath = os.getcwd().replace('\\','/')    # 获取当前路径
+running_cwd = currentPath
 
 
 with open("回测.bat","w+") as bk:
@@ -18,11 +19,10 @@ with open("回测.bat","w+") as bk:
 
 def excute_bat_file():
     subprocess.Popen(
-        rf"C:\Users\Administrator\Desktop\passivbot\回测.bat",
+        currentPath + "/回测.bat",
         creationflags=subprocess.CREATE_NEW_CONSOLE,
         cwd = running_cwd,
         )
 
 if __name__ == "__main__":
     excute_bat_file()
-
